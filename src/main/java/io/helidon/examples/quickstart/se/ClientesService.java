@@ -17,8 +17,9 @@ public class ClientesService implements HttpService
    @Override
    public void routing(HttpRules rules)
    {
-      rules.post("/clientes/{id}/transacoes", this::postTransacaoHandler).get("/clientes/{id}/extrato", this::getExtratoHandler)
-      // .put("/greeting", this::updateGreetingHandler);
+      rules
+         .post("/{id}/transacoes", this::postTransacaoHandler)
+         .get("/{id}/extrato", this::getExtratoHandler)
       ;
    }
 

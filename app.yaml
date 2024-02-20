@@ -34,3 +34,15 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
+database:
+  driverClassName: org.postgresql.Driver
+  jdbcUrl: jdbc:postgresql://localhost:5432/mydatabase
+  username: myusername
+  password: mypassword
+  hikari:
+    minimumIdle: 5
+    maximumPoolSize: 20
+    connectionTimeout: 30000
+    idleTimeout: 600000
+    maxLifetime: 1800000
+    poolName: myPool
